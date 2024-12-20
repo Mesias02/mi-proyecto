@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { View, Text, StyleSheet, ImageBackground, Animated, TouchableOpacity, Modal, FlatList } from 'react-native';
 
-const fondo = require('../assets/libro.jpg'); 
+const fondo = require('../assets/historia.png'); 
 
 const Pagina = () => {
   const moveAnim = useRef(new Animated.Value(0)).current;
@@ -46,7 +46,7 @@ const Pagina = () => {
 
   return (
     <ImageBackground source={fondo} style={styles.container} resizeMode="cover">
-      <TouchableOpacity style={styles.botonBlanco} onPress={handleBotonPress}><Text style={styles.botonText}>Selecciona 😍</Text></TouchableOpacity>
+      <TouchableOpacity style={styles.botonBlanco} onPress={handleBotonPress}><Text style={styles.botonText}>Selecciona</Text></TouchableOpacity>
       <View style={styles.botonesCentro}>
         <TouchableOpacity style={styles.boton} onPress={openPersonajesModal}><Text style={styles.botonText}>Personaje</Text></TouchableOpacity>
         <TouchableOpacity style={styles.boton} onPress={openLugaresModal}><Text style={styles.botonText}>Lugar</Text></TouchableOpacity>
